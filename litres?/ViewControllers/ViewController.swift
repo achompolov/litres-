@@ -29,19 +29,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             textToPickerView(textInput: type, tag: tag)
         }
         
-        
-        // Hide keyboard on tap outside
-            //Looks for single or multiple taps.
-            let tap: UITapGestureRecognizer =
-                UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-            //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-            tap.cancelsTouchesInView = false
-            view.addGestureRecognizer(tap)
-    }
-    
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+        self.hideKeyboardWhenTappedAround()
     }
     
     func textToPickerView(textInput: UITextField, tag: Int) {
