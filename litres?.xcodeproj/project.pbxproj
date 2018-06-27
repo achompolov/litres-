@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D76930175D09A426A7BBE4A /* Pods_litres_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCC8E62456A63CD143BEC29 /* Pods_litres_.framework */; };
 		F216A6F120DF1A3D006DBD5B /* FueloRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216A6F020DF1A3D006DBD5B /* FueloRequest.swift */; };
 		F266CCF720E3E42B00FED013 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266CCF620E3E42B00FED013 /* MapViewController.swift */; };
 		F266CCF920E3F2EC00FED013 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266CCF820E3F2EC00FED013 /* DismissKeyboard.swift */; };
@@ -31,6 +32,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12F7B5F2F9CBCDDC4B85738D /* Pods-litres?.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litres?.debug.xcconfig"; path = "Pods/Target Support Files/Pods-litres?/Pods-litres?.debug.xcconfig"; sourceTree = "<group>"; };
+		1D632E7184103ECB9D82D308 /* Pods-litres?.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litres?.release.xcconfig"; path = "Pods/Target Support Files/Pods-litres?/Pods-litres?.release.xcconfig"; sourceTree = "<group>"; };
+		2BCC8E62456A63CD143BEC29 /* Pods_litres_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_litres_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F216A6F020DF1A3D006DBD5B /* FueloRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FueloRequest.swift; sourceTree = "<group>"; };
 		F266CCF620E3E42B00FED013 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F266CCF820E3F2EC00FED013 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
@@ -48,12 +52,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D76930175D09A426A7BBE4A /* Pods_litres_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20C299630BB575EF9B484602 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12F7B5F2F9CBCDDC4B85738D /* Pods-litres?.debug.xcconfig */,
+				1D632E7184103ECB9D82D308 /* Pods-litres?.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D178B80A77F8C971026A2F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BCC8E62456A63CD143BEC29 /* Pods_litres_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F266CCF520E3E3F500FED013 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +90,8 @@
 			children = (
 				F27B935420C8337200EF0807 /* litres? */,
 				F27B935320C8337200EF0807 /* Products */,
+				20C299630BB575EF9B484602 /* Pods */,
+				2D178B80A77F8C971026A2F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,10 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F27B936420C8337400EF0807 /* Build configuration list for PBXNativeTarget "litres?" */;
 			buildPhases = (
+				1636244DEF15E03B5E0BA2C8 /* [CP] Check Pods Manifest.lock */,
 				F27B934E20C8337200EF0807 /* Sources */,
 				F27B934F20C8337200EF0807 /* Frameworks */,
 				F27B935020C8337200EF0807 /* Resources */,
 				F2489FAA20C859C800156073 /* Embed Frameworks */,
+				BADF36D0EFDC18B5977D7AE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +194,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1636244DEF15E03B5E0BA2C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-litres?-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BADF36D0EFDC18B5977D7AE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-litres?/Pods-litres?-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-litres?/Pods-litres?-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F27B934E20C8337200EF0807 /* Sources */ = {
@@ -320,11 +387,13 @@
 		};
 		F27B936520C8337400EF0807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12F7B5F2F9CBCDDC4B85738D /* Pods-litres?.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQ342N2Y27;
 				INFOPLIST_FILE = "litres?/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,11 +407,13 @@
 		};
 		F27B936620C8337400EF0807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D632E7184103ECB9D82D308 /* Pods-litres?.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQ342N2Y27;
 				INFOPLIST_FILE = "litres?/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
