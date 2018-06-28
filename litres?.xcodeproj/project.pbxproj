@@ -12,7 +12,6 @@
 		F266CCF720E3E42B00FED013 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266CCF620E3E42B00FED013 /* MapViewController.swift */; };
 		F266CCF920E3F2EC00FED013 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266CCF820E3F2EC00FED013 /* DismissKeyboard.swift */; };
 		F27B935620C8337200EF0807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B935520C8337200EF0807 /* AppDelegate.swift */; };
-		F27B935820C8337200EF0807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B935720C8337200EF0807 /* ViewController.swift */; };
 		F27B935B20C8337200EF0807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27B935920C8337200EF0807 /* Main.storyboard */; };
 		F27B935D20C8337400EF0807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27B935C20C8337400EF0807 /* Assets.xcassets */; };
 		F27B936020C8337400EF0807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27B935E20C8337400EF0807 /* LaunchScreen.storyboard */; };
@@ -40,7 +39,6 @@
 		F266CCF820E3F2EC00FED013 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		F27B935220C8337200EF0807 /* litres?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "litres?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27B935520C8337200EF0807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F27B935720C8337200EF0807 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F27B935A20C8337200EF0807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F27B935C20C8337400EF0807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F27B935F20C8337400EF0807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 		F266CCF520E3E3F500FED013 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F27B935720C8337200EF0807 /* ViewController.swift */,
 				F266CCF620E3E42B00FED013 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
@@ -241,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F27B935820C8337200EF0807 /* ViewController.swift in Sources */,
 				F27B935620C8337200EF0807 /* AppDelegate.swift in Sources */,
 				F216A6F120DF1A3D006DBD5B /* FueloRequest.swift in Sources */,
 				F266CCF720E3E42B00FED013 /* MapViewController.swift in Sources */,

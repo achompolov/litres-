@@ -7,60 +7,34 @@
 //
 
 import UIKit
-import MapKit
 import CoreLocation
+import GoogleMaps
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
-
-    @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var currentLocationButton: UIButton!
     
-    var locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
+        
         self.locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
             let userLocation = locationManager.location
-            let viewRegion = MKCoordinateRegionMakeWithDistance((userLocation?.coordinate)!, 600, 600)
-            self.map.setRegion(viewRegion, animated: true)
+            let camera = GMSCameraPosition.camera(withLatitude: (userLocation?.coordinate.latitude)!, longitude: (userLocation?.coordinate.longitude)!, zoom: 10)
+            let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+            mapView.mapType = .hybrid
+            mapView.isMyLocationEnabled = true
+            mapView.settings.myLocationButton = true
+            view = mapView
         }
-        
-        // reposition or hide compass in map view
-            //let compassButton = MKCompassButton(mapView: map)
-            map.showsCompass = false
-            //compassButton.frame.origin(x: , y: )
-            //compassButton.compassVisibility = .visible
-            //view.addSubview(compassButton)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // get user location and view it on the map
-    @IBAction func getUserLocation(_ sender: Any) {
-        let userLocation = locationManager.location
-        let viewRegion = MKCoordinateRegionMakeWithDistance((userLocation?.coordinate)!, 600, 600)
-        self.map.setRegion(viewRegion, animated: true)
-    }
-    
-    //    Updation user location and map view region
-    //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    //        //let locValue: CLLocationCoordinate2D = manager.location!.coordinate
-    //        //print("\(locValue.latitude), \(locValue.longitude)")
-    //        let userLocation = locations.last
-    //        let viewRegion = MKCoordinateRegionMakeWithDistance((userLocation?.coordinate)!, 600, 600)
-    //        self.map.setRegion(viewRegion, animated: true)
-    //    }
-
     /*
     // MARK: - Navigation
 
@@ -72,3 +46,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     */
 
 }
+
+
+
+
+
+
+

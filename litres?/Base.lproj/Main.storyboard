@@ -4,101 +4,11 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="litres_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="trip distance" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sL3-I9-lia">
-                                <rect key="frame" x="107" y="134" width="160" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="xnB-o0-IrW"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fuel consumption" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-Yg-8MR">
-                                <rect key="frame" x="107" y="210" width="160" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OIg-TI-uiT"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fuel type" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-Rw-shG">
-                                <rect key="frame" x="107" y="172" width="160" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="O7t-0u-09w"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJZ-oP-qNS">
-                                <rect key="frame" x="122" y="248" width="130" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Xrx-8x-EBF"/>
-                                </constraints>
-                                <state key="normal" title="calculate trip cost">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="getFuelPrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efi-ll-nhc"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJH-Ov-dza">
-                                <rect key="frame" x="16" y="314" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Xec-Gn-D77"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ruW-Rw-shG" firstAttribute="top" secondItem="sL3-I9-lia" secondAttribute="bottom" constant="8" symbolic="YES" id="17e-mr-emm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sL3-I9-lia" secondAttribute="trailing" constant="108" id="24f-ua-nN2"/>
-                            <constraint firstItem="cIp-Yg-8MR" firstAttribute="top" secondItem="ruW-Rw-shG" secondAttribute="bottom" constant="8" symbolic="YES" id="473-Zg-TyL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oJZ-oP-qNS" secondAttribute="trailing" constant="123" id="HZ4-oZ-oIt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dJH-Ov-dza" secondAttribute="trailing" constant="16" id="KQU-jJ-O6k"/>
-                            <constraint firstItem="oJZ-oP-qNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="Q97-M5-qvK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ruW-Rw-shG" secondAttribute="trailing" constant="108" id="jjL-x5-tLF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cIp-Yg-8MR" secondAttribute="trailing" constant="108" id="mJj-gb-Vta"/>
-                            <constraint firstItem="cIp-Yg-8MR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="mhh-Ib-DpQ"/>
-                            <constraint firstItem="dJH-Ov-dza" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nrj-vP-l8F"/>
-                            <constraint firstItem="dJH-Ov-dza" firstAttribute="top" secondItem="oJZ-oP-qNS" secondAttribute="bottom" constant="36" id="rHj-lx-dZg"/>
-                            <constraint firstItem="sL3-I9-lia" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="vGy-rA-kSg"/>
-                            <constraint firstItem="sL3-I9-lia" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="xx5-8e-ZJv"/>
-                            <constraint firstItem="ruW-Rw-shG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="ynx-vW-zYA"/>
-                            <constraint firstItem="oJZ-oP-qNS" firstAttribute="top" secondItem="cIp-Yg-8MR" secondAttribute="bottom" constant="8" symbolic="YES" id="z4Q-5J-Jg2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <connections>
-                        <outlet property="fuelConsumption" destination="cIp-Yg-8MR" id="yqd-Bb-jMb"/>
-                        <outlet property="fuelType" destination="ruW-Rw-shG" id="AyB-wd-f6A"/>
-                        <outlet property="tripDistance" destination="sL3-I9-lia" id="ckd-en-HZq"/>
-                        <outlet property="tripPrice" destination="dJH-Ov-dza" id="sK8-WO-STB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-47" y="36"/>
-        </scene>
         <!--Map View Controller-->
         <scene sceneID="bzc-BG-fSw">
             <objects>
@@ -107,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-8c-ciR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <connections>
-                                    <outlet property="delegate" destination="w6I-MH-BWY" id="DIq-d9-10L"/>
-                                </connections>
-                            </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6k-Ov-qoa">
                                 <rect key="frame" x="16" y="76" width="343" height="30"/>
                                 <constraints>
@@ -151,15 +55,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="H3G-8c-ciR" secondAttribute="bottom" id="0Bq-lN-jfs"/>
-                            <constraint firstItem="H3G-8c-ciR" firstAttribute="leading" secondItem="6xS-f9-iTC" secondAttribute="leading" id="JKs-cB-Tj6"/>
-                            <constraint firstItem="H3G-8c-ciR" firstAttribute="trailing" secondItem="6xS-f9-iTC" secondAttribute="trailing" id="Rif-my-dcc"/>
                             <constraint firstItem="q6k-Ov-qoa" firstAttribute="leading" secondItem="6xS-f9-iTC" secondAttribute="leading" constant="16" id="bZI-kH-t99"/>
                             <constraint firstItem="6xS-f9-iTC" firstAttribute="trailing" secondItem="Q0f-OD-rq1" secondAttribute="trailing" constant="16" id="dsE-LN-5Fi"/>
                             <constraint firstItem="QIU-cO-Q5b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bv3-Ao-AJj" secondAttribute="leading" constant="20" symbolic="YES" id="jsV-yy-hxA"/>
                             <constraint firstItem="QIU-cO-Q5b" firstAttribute="trailing" secondItem="Q0f-OD-rq1" secondAttribute="trailing" id="kpL-rs-nI0"/>
                             <constraint firstItem="Q0f-OD-rq1" firstAttribute="leading" secondItem="6xS-f9-iTC" secondAttribute="leading" constant="16" id="lC5-M3-Cqc"/>
-                            <constraint firstItem="H3G-8c-ciR" firstAttribute="top" secondItem="Bv3-Ao-AJj" secondAttribute="top" id="lfx-HT-QeU"/>
                             <constraint firstItem="QIU-cO-Q5b" firstAttribute="top" secondItem="Q0f-OD-rq1" secondAttribute="bottom" constant="8" id="meX-hV-Dba"/>
                             <constraint firstItem="6xS-f9-iTC" firstAttribute="trailing" secondItem="q6k-Ov-qoa" secondAttribute="trailing" constant="16" id="qCP-CK-KXK"/>
                             <constraint firstItem="Q0f-OD-rq1" firstAttribute="top" secondItem="q6k-Ov-qoa" secondAttribute="bottom" constant="8" id="wOt-Ha-CgU"/>
@@ -169,12 +69,11 @@
                     </view>
                     <connections>
                         <outlet property="currentLocationButton" destination="QIU-cO-Q5b" id="FPe-gP-G6L"/>
-                        <outlet property="map" destination="H3G-8c-ciR" id="vgK-3I-hxT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKc-ge-H2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.5" y="35"/>
+            <point key="canvasLocation" x="884" y="34.729064039408868"/>
         </scene>
     </scenes>
 </document>
